@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" id="vYn-kq-UMk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rhb-Bj-0sP">
                             <connections>
-                                <segue destination="sPz-2P-ujT" kind="show" id="oqN-0n-NKz"/>
+                                <segue destination="sPz-2P-ujT" kind="show" identifier="juegoSegue" id="oqN-0n-NKz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -73,15 +73,25 @@
                                     <action selector="agregarTapped:" destination="sPz-2P-ujT" eventType="touchUpInside" id="tUq-XR-e0P"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5W-XA-HVH">
+                                <rect key="frame" x="169" y="395" width="76" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Eliminar"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="sPz-2P-ujT" eventType="touchUpInside" id="fLq-pz-baE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lRy-qb-arJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="iZh-a0-8uy" firstAttribute="top" secondItem="lRy-qb-arJ" secondAttribute="top" constant="32" id="CyU-Ly-rUH"/>
                             <constraint firstItem="L1o-kT-LFa" firstAttribute="centerX" secondItem="odh-yg-MlI" secondAttribute="centerX" id="HmF-Nd-0io"/>
+                            <constraint firstItem="W5W-XA-HVH" firstAttribute="top" secondItem="L1o-kT-LFa" secondAttribute="bottom" constant="20" id="Ij6-rN-XHU"/>
                             <constraint firstItem="L1o-kT-LFa" firstAttribute="centerX" secondItem="odh-yg-MlI" secondAttribute="centerX" id="PHI-tq-xMt"/>
                             <constraint firstItem="XSR-Lu-PT7" firstAttribute="top" secondItem="iZh-a0-8uy" secondAttribute="bottom" constant="20" id="PSP-8Z-wiP"/>
                             <constraint firstItem="iZh-a0-8uy" firstAttribute="centerX" secondItem="odh-yg-MlI" secondAttribute="centerX" id="Qai-1V-PMh"/>
+                            <constraint firstItem="W5W-XA-HVH" firstAttribute="centerX" secondItem="odh-yg-MlI" secondAttribute="centerX" id="V9i-RQ-RO0"/>
                             <constraint firstItem="XSR-Lu-PT7" firstAttribute="width" secondItem="iZh-a0-8uy" secondAttribute="width" id="WlV-pW-JZZ"/>
                             <constraint firstItem="XSR-Lu-PT7" firstAttribute="centerX" secondItem="odh-yg-MlI" secondAttribute="centerX" id="nfg-b9-PO7"/>
                             <constraint firstItem="L1o-kT-LFa" firstAttribute="top" secondItem="XSR-Lu-PT7" secondAttribute="bottom" constant="20" id="xc8-xN-gue"/>
@@ -103,6 +113,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="JuegoImageView" destination="iZh-a0-8uy" id="D2c-0M-NvG"/>
+                        <outlet property="agregarActualizarBoton" destination="L1o-kT-LFa" id="VyT-OH-8WW"/>
+                        <outlet property="eliminarBoton" destination="W5W-XA-HVH" id="kd6-kF-dPR"/>
                         <outlet property="tituloTextField" destination="XSR-Lu-PT7" id="sfc-S9-fgc"/>
                     </connections>
                 </viewController>
